@@ -1,23 +1,23 @@
 # MyDataStructures
 
-Проект реализует пользовательские структуры данных на Java без использования `java.util.*` (кроме `Iterator`).
+The project implements custom data structures in Java without using `java.util.*` (except `Iterator`).
 
-## Структура
+## Structure
 
-- **MyList.java**: Интерфейс для операций со списком.
-- **MyArrayList.java**: Список на основе динамического массива.
-- **MyLinkedList.java**: Двусвязный список.
-- **MyStack.java**: Стек (LIFO) на основе MyArrayList.
-- **MyQueue.java**: Очередь (FIFO) на основе MyLinkedList.
-- **MyMinHeap.java**: Минимальная куча на основе MyArrayList для сравнимых элементов.
+- **MyList.java**: Interface for list operations.
+- **MyArrayList.java**: A list based on a dynamic array.
+- **MyLinkedList.java**: A bi-linked list.
+- **MyStack.java**: Stack (LIFO) based on MyArrayList.
+- **MyQueue.java**: Queue (FIFO) based on MyLinkedList.
+- **MyMinHeap.java**: MyArrayList-based minimal heap for comparable items.
 
-## Выбор дизайна
+## Design Choices
 
-- **MyStack**: Использует MyArrayList для операций O(1) с концом.
-- **MyQueue**: Использует MyLinkedList для операций O(1) с обоих концов.
-- **MyMinHeap**: Использует MyArrayList для эффективной реализации бинарной кучи в массиве.
+- **MyStack**: Uses MyArrayList for O(1) operations with end.
+- **MyQueue**: Uses MyLinkedList for O(1) operations on both ends.
+- **MyMinHeap**: Uses MyArrayList to efficiently implement a binary heap in an array.
 
-## Использование
+## Usage
 
 ```java
 MyStack<Integer> stack = new MyStack<>();
@@ -25,10 +25,12 @@ stack.push(1);
 System.out.println(stack.pop()); // 1
 
 MyQueue<String> queue = new MyQueue<>();
-queue.enqueue("привет");
-System.out.println(queue.dequeue()); // привет
+queue. enqueue("hello");
+System.out.println(queue.dequeue()); // hello
 
 MyMinHeap<Integer> heap = new MyMinHeap<>();
 heap.add(3);
 heap.add(1);
 System.out.println(heap.removeMin()); // 1
+
+Translated with DeepL.com (free version)
